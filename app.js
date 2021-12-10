@@ -1,6 +1,6 @@
 const myToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTgyOTU0M2FhY2FhMjAwMTU1MmExOWYiLCJpYXQiOjE2MzkxNDMwNjEsImV4cCI6MTY0MDM1MjY2MX0.P8swnCNNDtgTs6OrEXKqzZ-rjLq9uRMb8lxQfa87uI8"
 const url = "https://striveschool-api.herokuapp.com/api/movies/"    
-const genreUrl = 'https://striveschool-api.herokuapp.com/api/movies/'
+const genreUrl = 'https://striveschool-api.herokuapp.com/api/movies/action'
 
 const getMovies = async() =>{
     try{
@@ -17,6 +17,7 @@ const getMovies = async() =>{
         console.log(error)
     }
 }
+
 const getMovieByGenre = async() =>{
     try{
         const response = await fetch(genreUrl,{
@@ -62,6 +63,36 @@ const postMovie = async(event) =>{
         console.log(error)
     }
 }
+
+const deleteMovie = async() =>{
+
+    const accepted = confirm("Are you sure you want to permanently DELETE this movie?")
+    if(accepted){
+        try {
+            const response = fetch(url, )
+        } catch (error) {
+            
+        }
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 const validateForm = (event) => {
     event.target.form.classList.add('validated')

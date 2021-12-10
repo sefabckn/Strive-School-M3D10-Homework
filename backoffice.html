@@ -44,10 +44,10 @@
                     <a class="nav-link" href="#">Recently Added</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/backoffice.html">Go to BackOffice</a>
+                    <a class="nav-link" href="/index.html">Go to Home Page</a>
                 </li>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" onclick = 'getMovieByGenre()'href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
@@ -108,24 +108,24 @@
                     <h1></h1>
                     <form onsubmit="postMovie(event)">
                         <div class="form-group">
-                            <label for="name">Movie Name</label>
+                            <label for="name" class='text-light'>Movie Name</label>
                             <input type="text" class="form-control" id="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="description">Description</label>
+                            <label for="description" class='text-light'>Description</label>
                             <textarea class="form-control" id="description" rows="3" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="category">Category</label>
+                            <label for="category" class='text-light'>Category</label>
                             <input type="text" class="form-control" id="category" required>
                         </div>
                         <div class="form-group">
-                            <label for="imageUrl">Image URL</label>
+                            <label for="imageUrl" class='text-light'>Image URL</label>
                             <input type="text" class="form-control" id="imageUrl" required>
                         </div>
                         <div class="d-flex">
                             <button id="resetBtn" type="reset" class="btn btn-warning">Reset</button>
-                            <button id="submitBtn" class="btn btn-success ml-2" onclick="validateForm(event)"></button>
+                            <button id="submitBtn" class="btn btn-success ml-2" onclick="validateForm(event)">Save</button>
                             <button id="deleteBtn" type="button" class="btn btn-sm btn-danger ml-auto d-none"
                                 onclick="deleteMovie()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -139,9 +139,7 @@
                 </div>
             </div>
         </div>
-    
-        
-        
+        <br>
         <div id="footer" class="container">
             <div class="row">
                 <div class="col-8 offset-md-2 mb-3">
