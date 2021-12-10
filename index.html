@@ -83,9 +83,9 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: rgb(20, 20, 20);">
                   Genres
                 </button>
-                <div class="dropdown-menu" style="background-color: rgb(20, 20, 20); color: white;" aria-labelledby="dropdownMenuButton">
+                <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Horror</a> <!-- now hard coded but should be filled by api -->
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </div>
@@ -117,27 +117,27 @@
         </div>
         <div class="row mx-n1 ">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media14.webp" class="w-100 img-fluid">
+                <img src="/assets/media/media14.webp" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media15.jpg" class="w-100 img-fluid">
+                <img src="/assets/media/media15.jpg" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media16.webp" class="w-100 img-fluid">
+                <img src="/assets/media/media16.webp" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0 d-md-none d-lg-block">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media17.jpg" class="w-100 img-fluid">
+                <img src="/assets/media/media17.jpg" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0 d-none d-xl-block">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media18.jpg" class="w-100 img-fluid">
+                <img src="/assets/media/media18.jpg" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0 d-none d-xl-block">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media19.webp" class="w-100 img-fluid">
+                <img src="/assets/media/media19.webp" class="w-100 img-fluid">
 
             </div>
         </div>
@@ -147,30 +147,30 @@
         </div>
         <div class="row mx-n1 ">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media20.jpg" class="w-100 img-fluid">
+                <img src="./assets/media/media20.jpg" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-0 mb-4 mb-lg-0">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media21.webp" class="w-100 img-fluid">
+                <img src="/assets/media/media21.webp" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media22.webp" class="w-100 img-fluid">
+                <img src="/assets/media/media22.webp" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0 d-md-none d-lg-block">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media23.webp" class="w-100 img-fluid">
+                <img src="/assets/media/media23.webp" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0 d-none d-xl-block">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media24.jpg" class="w-100 img-fluid">
+                <img src="/assets/media/media24.jpg" class="w-100 img-fluid">
 
             </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 px-1 mb-4 mb-lg-0 d-none d-xl-block">
-                <img src="./netflix-ui-start/netflix-ui-start/assets/media/media25.webp" class="w-100 img-fluid">
+                <img src="/assets/media/media25.webp" class="w-100 img-fluid">
             </div>
         </div>
-
+        <br>
         <div id="footer" class="container">
             <div class="row">
                 <div class="col-8 offset-md-2 mb-3">
@@ -212,7 +212,29 @@
                 </div>
             </div>
         </div>
+        <script>
 
+            const response = fetch("https://striveschool-api.herokuapp.com/api/movies/", {
+            headers: {
+            
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTgyOTU0M2FhY2FhMjAwMTU1MmExOWYiLCJpYXQiOjE2MzkxNDMwNjEsImV4cCI6MTY0MDM1MjY2MX0.P8swnCNNDtgTs6OrEXKqzZ-rjLq9uRMb8lxQfa87uI8"
+            }
+            })
+            if(response.ok){
+                const data  = response.json()
+                console.log(data)
+
+            }
+
+
+
+
+
+
+
+
+
+        </script>
 
 
         <script src="https://kit.fontawesome.com/0ff23863bb.js" crossorigin="anonymous"></script>

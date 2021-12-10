@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="netflix-ui-start/netflix-ui-start/css/styles.css" rel="stylesheet">
+    <title>Ahmetflix</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-color">
+        <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#">
+                <img src="netflix_logo.png" alt="" width="120">
+            </a>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TV Shows</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recently Added</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/backoffice.html">Go to BackOffice</a>
+                </li>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                </li>
+            </ul>
+            <div class="dropdown">
+                <img src="lens.svg" width="22" class="mr-2" />
+                <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a  width="32" class="mr-4" style="color: white;">Kids</a>
+                    
+                    <div class="d-inline-block align-middle">
+                        <p class="truncate mb-0">
+                            <img src="avatar.png" alt="" height="40px">
+                        </p>
+                    </div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="background-color: rgb(20, 20, 20); color: rgb(20, 20, 20);">
+                    <button class="dropdown-item " style="color: whitesmoke;" type="button" onclick="Profile.html">Profile</button>
+                    <button class="dropdown-item" style="color: whitesmoke;" type="button">Settings</button>
+                    <button class="dropdown-item" style="color: whitesmoke;" type="button">Log out</button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex" style="color: whitesmoke; padding-top: 20px; padding-left: 10px;">
+        <div class="p-2">
+            <h2>TV Shows</h2>
+        </div>
+        <div class="p-2">
+            <div class="dropdown" style="color: whitesmoke;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: rgb(20, 20, 20);">
+                  Genres
+                </button>
+                <div class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Horror</a> <!-- now hard coded but should be filled by api -->
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+        <div class="ml-auto p-2">
+            <div class="d-flex flex-nowrap">
+                <div class="order-3 p-2" style= "width: 18px; height:20px; justify-content:center; align-items:center; padding-right: 4px;margin-bottom:1.15rem; margin-left:0.15rem;">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" class="svg-inline--fa fa-list fa-w-16" style=" width: 18px; height:20px; padding-right: 4px;" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"></path></svg>
+                </div>
+                <div class="order-2 p-2" style="border-style:solid; border-width:thin; width: 40px; height: 35px;">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="th-large" class="svg-inline--fa fa-th-large fa-w-16" style="width: 18px; height:20px; justify-content:center; align-items:center; padding-right: 4px;margin-bottom:1.15rem; margin-left:0.15rem;"" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M296 32h192c13.255 0 24 10.745 24 24v160c0 13.255-10.745 24-24 24H296c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24zm-80 0H24C10.745 32 0 42.745 0 56v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24zM0 296v160c0 13.255 10.745 24 24 24h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm296 184h192c13.255 0 24-10.745 24-24V296c0-13.255-10.745-24-24-24H296c-13.255 0-24 10.745-24 24v160c0 13.255 10.745 24 24 24z"></path></svg></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-1 ml-6">
+        
+        <div id="mainContainer" class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <h1></h1>
+                    <form onsubmit="postMovie(event)">
+                        <div class="form-group">
+                            <label for="name">Movie Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <input type="text" class="form-control" id="category" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="imageUrl">Image URL</label>
+                            <input type="text" class="form-control" id="imageUrl" required>
+                        </div>
+                        <div class="d-flex">
+                            <button id="resetBtn" type="reset" class="btn btn-warning">Reset</button>
+                            <button id="submitBtn" class="btn btn-success ml-2" onclick="validateForm(event)"></button>
+                            <button id="deleteBtn" type="button" class="btn btn-sm btn-danger ml-auto d-none"
+                                onclick="deleteMovie()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                </svg></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        
+        
+        <div id="footer" class="container">
+            <div class="row">
+                <div class="col-8 offset-md-2 mb-3">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 offset-md-2">
+                    <a class="d-block mb-3" href="#">Audio and Subtitles</a>
+                    <a class="d-block mb-3" href="#">Media Center</a>
+                    <a class="d-block mb-3" href="#">Privacy</a>
+                    <a class="d-block mb-3" href="#">Contact Us</a>
+
+                    <button id="button-servic" type="button" class="btn btn-outline-light mt-3 mb-3">Service Code</button>
+                </div>
+                <div class="col-md-2">
+                    <a class="d-block mb-3" href="#">Audio Description</a>
+                    <a class="d-block mb-3" href="#">Investor Relations</a>
+                    <a class="d-block" href="#">Legal Notices</a>
+                </div>
+                <div class="col-md-2">
+                    <a class="d-block mb-3" href="#">Help Center</a>
+                    <a class="d-block mb-3" href="#">Jobs</a>
+                    <a class="d-block" href="#">Cookie Preferences</a>
+                </div>
+                <div class="col-md-2">
+                    <a class="d-block mb-3" href="#">Gift Cards</a>
+                    <a class="d-block mb-3" href="#">Terms of Use</a>
+                    <a class="d-block" href="#">Corporate Information</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="last-line" class="col-8 offset-md-2">
+                    &copy; 1997-2019 Netflix, INC. {i-0d00fcda2fdf9c0de}
+                </div>
+            </div>
+        </div>
+        <script>
+
+
+
+
+
+        </script>
+
+
+        <script src="https://kit.fontawesome.com/0ff23863bb.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="/app.js"></script>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
